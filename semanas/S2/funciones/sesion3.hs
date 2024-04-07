@@ -1,4 +1,4 @@
-module Clase3 where
+module Sesion3 where
 
 doble :: Float -> Float
 doble x = x + x

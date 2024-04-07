@@ -1,6 +1,6 @@
 module Test where
 
-import Clase3
+import Sesion3
 
 -- Haskell - Programacion funcional
 
