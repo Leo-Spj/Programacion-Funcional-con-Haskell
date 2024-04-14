@@ -1,22 +1,22 @@
 # Haskell
 
-### Para hacer pruebas en terminal
+### Para hacer pruebas en terminal:
 
 Ejecutar desde la ubicación del archivo
 
 ```bash 
 ghci
-:load NombreModulo # Carga el módulo o archivo a usar
+:load NombreArchivo.hs # Carga el módulo o archivo a usar
 ```
 
 
-### Ejecutar sin compilar
+#### Ejecutar sin compilar
 
 ```bash
 runhaskell main.hs
 ```
 
-### Compilar y ejecutar
+#### Compilar y ejecutar
 
 ```bash
 ghc -o main main.hs
