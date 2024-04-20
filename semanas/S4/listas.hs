@@ -38,6 +38,9 @@ sumar(x:xs) = x + sumar xs
 -- prelude
 -- elem 3 [1,2,3,4] -> True
 
+-- odd es una funcion que devuelve True si el numero es impar
+-- even es una funcion que devuelve True si el numero es par
+
 
 --------------------------------------
     -- head xs -> devuelve el primer elemento de la lista xs
@@ -87,3 +90,23 @@ sumar(x:xs) = x + sumar xs
 -- replicate n x -> devuelve una lista con n elementos iguales a x
 -- prelude
 -- replicate 3 5 -> [5,5,5]
+
+-- maximum xs -> devuelve el maximo elemento de la lista xs
+-- prelude
+-- maximum [1,2,3,4] -> 4
+
+-- minimum xs -> devuelve el minimo elemento de la lista xs
+-- prelude
+-- minimum [1,2,3,4] -> 1
+
+-- sum xs -> devuelve la suma de los elementos de la lista xs
+-- prelude
+-- sum [1,2,3,4] -> 10
+
+-- product xs -> devuelve el producto de los elementos de la lista xs
+-- prelude
+-- product [1,2,3,4] -> 24
+
+-- map f xs -> aplica la funcion f a cada elemento de la lista xs
+-- prelude
+-- map (+1) [1,2,3,4] -> [2,3,4,5]
