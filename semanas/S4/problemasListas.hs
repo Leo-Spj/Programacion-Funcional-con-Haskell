@@ -40,3 +40,37 @@ largo xs = sum[1 | _ <- xs]
 -- calcular el maximo elemento de una lista sin usar maximun
 maximo [x] = x
 maximo (x:xs) = if x > maximo xs then x else maximo xs
+
+
+
+-- ejecutar las 4 operaciones basicas, usando dado 3 numeros enteros, usando el mayor y el mejor, no usar listas
+-- 
+
+
+
+max3 x y z = max (max x y) z
+min3 x y z = min (min x y) z
+
+
+sumaT x y z = (max3 x y z) + (min3 x y z)
+
+restaT x y z = (max3 x y z) - (min3 x y z)
+
+multiplicacionT x y z = (max3 x y z) * (min3 x y z)
+
+divicionnT x y z = (max3 x y z) / (min3 x y z)
+
+
+calculadora x y z operador 
+    | operador == "suma" = sumaT x y z
+    | operador == "resta" = restaT x y z
+    | operador == "multiplicacion" = multiplicacionT x y z
+    | operador == "divicion" = divicionnT x y z
+
+
+-- una lista de listas que contenga los valores de los lados un 
+-- triangulo rectangulo que sus lados vayan de 1 al 100
+triangulos = [[a,b,c]| c <- [1..100], a<-[1..c], b<-[1..a], a^2 +b^2 == c^2]    
+
+-- calcular la distancia entre dos puntos en el plano x y z
+distancia (x1,y1,z1) (x2,y2,z2) = sqrt((x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2)
