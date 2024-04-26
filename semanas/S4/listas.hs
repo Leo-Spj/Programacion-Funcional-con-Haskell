@@ -34,7 +34,7 @@ sumar(x:xs) = x + sumar xs
 -- drop 2 [1,2,3,4] -> [3,4]
 
 
--- elemen x xs -> devuelve True si x es un elemento de la lista xs
+-- elem x xs -> devuelve True si x es un elemento de la lista xs
 -- prelude
 -- elem 3 [1,2,3,4] -> True
 
