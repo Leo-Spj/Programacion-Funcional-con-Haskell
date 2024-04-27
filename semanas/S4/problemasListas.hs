@@ -74,3 +74,4 @@ triangulos = [[a,b,c]| c <- [1..100], a<-[1..c], b<-[1..a], a^2 +b^2 == c^2]
 
 -- calcular la distancia entre dos puntos en el plano x y z
 distancia (x1,y1,z1) (x2,y2,z2) = sqrt((x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2)
+
