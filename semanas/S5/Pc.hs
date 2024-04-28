@@ -2,7 +2,7 @@ module Pc where
 
 
 
-{- Desarrolle una funcion en la que se ingresen 5 numeros enteros positivos 
+{- 1) Desarrolle una funcion en la que se ingresen 5 numeros enteros positivos 
 y realice las cuatro operaciones basicas tomando el mayor y el menor de los 
 numeros. Nota: No utilice listas, tampoco funciones haskell min, max.
 -}
@@ -29,7 +29,7 @@ calculadora operacion a b c d e
 
 
 
-{-dados una lista de listas y un numero natural n , multiplicar los elementos de 
+{- 2) Dados una lista de listas y un numero natural n , multiplicar los elementos de 
 cada sublita por n si la cantidad de elementos de la sublista es menor que n
 -}
 
@@ -41,7 +41,7 @@ subMulti (l:ls) n
     | otherwise = l : subMulti ls n
 
 
-{-Dada una lista, determinar el producto de dicha lista con 
+{- 3) Dada una lista, determinar el producto de dicha lista con 
 su inversa. Nota: No utilice la funcion haskell reverse.
 -}
 
@@ -51,7 +51,7 @@ reversa (x:xs) = reversa xs ++ [x]
 listaXLista xs = [ x*y | x <- xs , y <- reversa xs ]
 
 
-{-Dado un numero natural n hallar todos 
+{- 4) Dado un numero natural n hallar todos 
 los numeros primos entre 1 y n
 -}
 
@@ -61,7 +61,7 @@ numerosPrimos n = [x | x <- [1..n], primo x]
 
 
 
-{- Data una lista de numeros naturales verifica si es una lista ordenada. 
+{- 5) Data una lista de numeros naturales verifica si es una lista ordenada. 
 no usar funciones haskell, retornar true o false usar recursividad
 -}
 
