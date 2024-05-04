@@ -65,11 +65,13 @@ numerosPrimos n = [x | x <- [1..n], primo x]
 no usar funciones haskell, retornar true o false usar recursividad
 -}
 
-ordenada [] = True
-ordenada [_] = True
-ordenada (x:y:xs) = x <= y && ordenada (y:xs)
+ordenadaAsc [] = True
+ordenadaAsc [_] = True
+ordenadaAsc (x:y:xs) = x <= y && ordenadaAsc (y:xs)
 
+ordenadaDesc [] = True
+ordenadaDesc [_] = True
+ordenadaDesc (x:y:xs) = x >= y && ordenadaDesc (y:xs)
 
-
-
+ordenada xs = ordenadaAsc xs || ordenadaDesc xs
 
