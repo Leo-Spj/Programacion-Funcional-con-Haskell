@@ -35,10 +35,14 @@ cada sublita por n si la cantidad de elementos de la sublista es menor que n
 
 listaX xs n = [x*n | x<- xs]
 
+subMultiplicar xs n = [ if length x < n then listaX x n else x | x <- xs]
+
+{- -- Otra forma de hacerlo:
 subMulti [] n = []
 subMulti (l:ls) n
     | length l < n = listaX l n : subMulti ls n
     | otherwise = l : subMulti ls n
+-}
 
 
 {- 3) Dada una lista, determinar el producto de dicha lista con 
