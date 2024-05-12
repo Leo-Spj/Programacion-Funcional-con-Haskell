@@ -46,3 +46,14 @@ surface (Rectangle (Point x y)  (Point x' y')) = (abs (x-x')) * (abs (y-y'))
 
 -- surface (Circle (Point 0 1) 3)
 -- surface (Rectangle  (Point 0 0) (Point 3 3))
+
+
+data Punto = Punto (Float, Float, Float)
+distancia :: Punto -> Punto -> Float
+distancia (Punto (x1, y1, z1)) (Punto (x2, y2, z2)) = sqrt ( dx^2 + dy^2 + dz^2) 
+    where 
+        dx = x1 - x2
+        dy = y1 - y2
+        dz = z1 - z2
+
+-- distancia (Punto (0,0,0)) (Punto (1,1,1))
