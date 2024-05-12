@@ -34,3 +34,19 @@ allTrueTupla (x, y) = x && y
 
 -- [("Jorge", 13), ("Maria", 16), ("Juan", 11)]
 aprobados lista notaMin = [ nombre | (nombre, nota) <- lista, nota >= notaMin]
+
+
+-- La funcion zip 
+-- zip [1,2,3] ["a", "b", "c"]      -> [(1,1),(2,2),(3,3)] -- Devuelve tuplas de elementos emparejados
+-- zip [1,2,3,4,5] ["a", "b", "c"]  -> [(1,1),(2,2),(3,3)] -- NO coloca elementos sin pareja
+-- zip [1..] ["a", "b", "c"]        -> [(1,"a"),(2,"b"),(3,"c")]
+
+
+matrizCuadrada lista1 lista2 = [(x,y) | x <- lista1, y <- lista2]
+
+-- [(1,1), (2,2), (3,3)]
+matrizTriangularSuperior lista = [(fst x, snd y) | x <- lista, y <- lista, fst x <= fst y] -- Superior
+matrizTriangularSuperior lista = [(fst x, snd y) | x <- lista, y <- lista, fst x >= fst y] -- Inferior
+matrizTriangularSuperior lista = [(fst x, snd y) | x <- lista, y <- lista, fst x = fst y] -- Triangular
+
+
