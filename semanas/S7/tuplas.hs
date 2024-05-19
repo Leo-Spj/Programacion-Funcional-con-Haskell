@@ -46,7 +46,4 @@ matrizCuadrada lista1 lista2 = [(x,y) | x <- lista1, y <- lista2]
 
 -- [(1,1), (2,2), (3,3)]
 matrizTriangularSuperior lista = [(fst x, snd y) | x <- lista, y <- lista, fst x <= fst y] -- Superior
-matrizTriangularSuperior lista = [(fst x, snd y) | x <- lista, y <- lista, fst x >= fst y] -- Inferior
-matrizTriangularSuperior lista = [(fst x, snd y) | x <- lista, y <- lista, fst x == fst y] -- Triangular
-
-
+matrizTriangularInferior lista = [(fst x, snd y) | x <- lista, y <- lista, fst x >= fst y] -- Inferior
