@@ -53,6 +53,10 @@ pares2 = filter even [1..100]
 -- dropWhile even [2,4,6,7,8,9]
 --[7,8,9]
 
+-- zipWith -> aplica una funcion a los elementos de dos listas
+-- zipWith (+) [1,2,3] [4,5,6]
+--[5,7,9]
+
 -- definir una estruc de datos que tenga como elem el usuario hostloc etc para una tranf de archivos un serv a otro
 -- solo definicio y con criterio 
 
@@ -67,6 +71,9 @@ pares2 = filter even [1..100]
 -- Ejemplo de uso de lambdas
 -- map (\x -> x + 1) [1,2,3,4]
 
+-- zipWith (\a b -> (a*3)/b)[1,2,3] [3,2,1]
+-- [1.0,3.0,9.0]
+
 
 
 -- Sea un numero natural n si es par entonces lo dividimos entre 2 y si es impar lo multiplicamos por 3 y sumamos 1
@@ -77,3 +84,5 @@ collatz n
     | even n = n : collatz (n `div` 2)
     | otherwise = n : collatz (n*3 + 1)
 
+-- con lambdas
+collatzL n = takeWhile (/=1) (iterate (\x -> if even x then x `div` 2 else x*3 + 1) n)
