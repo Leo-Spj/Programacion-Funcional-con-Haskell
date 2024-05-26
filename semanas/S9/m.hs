@@ -1,4 +1,3 @@
-module Semana9S1 where
 
 
 repetirInf x = [x | x<-[1..]]
@@ -86,3 +85,31 @@ collatz n
 
 -- con lambdas
 collatzL n = takeWhile (/=1) (iterate (\x -> if even x then x `div` 2 else x*3 + 1) n)
+
+
+-- definir la funcion filter por comprension
+filterComp fun xs = [x | x <- xs, fun x]
+-- filterComp (\x -> x>2) [1,1,2,2,3,4,5]
+-- [3,4,5]
+--recursion
+filterRec _ [] = []
+filterRec fun (x:xs)
+    | fun x = x:filterRec fun xs
+    | otherwise = filterRec fun xs
+-- filterRec (\x->x>2) [1,1,2,2,3,4]
+-- [3,4]
+
+
+-- encontrar una lista de listas que el primer elemento sea la raiz cuadrada del segundo elemento, }
+-- cada elemento es un numero natural, mostrar los primeros 20 elementos
+-- [ [1,2], [2,3], [2,3] ...]
+
+--(\[a,b] -> a*a ==b)
+
+-- take 20 (filterRec (\[a,b] -> sqrt b == a)  [[2,4], [2,5], [3,9]])
+
+-- dada una lista de listas encontrar la lista cuyos elementos sean los primeros elementos de cada sublista
+-- siempre que dicho elemento sea mayor que la suma que el resto de elementos de dicha sublista
+
+listaFiltradaX :: [[Int]] -> [Int]
+listaFiltradaX lista = [x | (x:xs) <- lista , x > sum xs ]
