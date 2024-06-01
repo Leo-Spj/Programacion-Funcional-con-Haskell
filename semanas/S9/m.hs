@@ -13,8 +13,8 @@ repiteValoresNVecesRec n x
 
 
 -- tal que una cadena  "abc" el primero se repida 1 vez el segundo 2 el tercero 3, abbccc
---ecoC:: String -> String
---ecoC xs = concat[ replicate ¡x | (i,x)<- zip [1..] xs]
+ecoC :: String -> String
+ecoC xs = concat [ replicate i x | (i,x) <- zip [1..] xs ]
 
 
 -- map por comprension
