@@ -18,22 +18,29 @@ cuadratica a b c = [(-b + signo * sqrt(raiz))/(2*a) | signo <- [-1,1], raiz <- [
 
 
 raices a b c
-    | a  == 0 error "No cuadratica"
+    | a == 0 = error "No es cuadratica"
     | b^2 - 4*a*c < 0 = error "Discriminante menor a 0"
     | otherwise = [x, y]
-        where x = div (-b + s) 
-
+        where x = (-b + s) / (2*a)
+              y = (-b - s) / (2*a)
+              s = sqrt (b^2 - 4*a*c)
 
 -- determinar si un conjun está dentro de otro conjunto
 
-subIzq [] _ = true
+
+subIzq [] _ = True
 subIzq (x:xs) ys =elem x ys && subIzq xs ys
 
-subDer _ [] = true
-subDer xs (y:ys) = elem 
+subDer _ [] = True
+subDer xs (y:ys) = elem y xs && subDer xs ys
+
+subConjunto xs ys = subIzq xs ys || subDer xs ys
+
 
 
 -- concatenar 2 listas sin usar concat ni ++
+concatenar [] ys = ys
+concatenar (x:xs) ys = x : concatenar xs ys
 
 
 
